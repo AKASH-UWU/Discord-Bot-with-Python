@@ -17,11 +17,11 @@ client = commands.Bot(command_prefix='!', intents=intents)
 ##member event
 @client.event 
 async def on_member_join(member):
-    if member.guild.name == "Pasta Sempa":
+    if member.guild.name == "Your_Server_Name":
         embed = discord.Embed(description=f'Hey {member.mention}, Welcome to **{member.guild.name}**',
                                 colour=discord.Colour.red())
         await client.get_channel(854624186118438933).send(embed=embed)
-        role = discord.utils.get(member.guild.roles, name='Member')
+        role = discord.utils.get(member.guild.roles, name='Role_Name')
         await member.add_roles(role)
 
 ##Cogs loader
